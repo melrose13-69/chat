@@ -1,0 +1,64 @@
+@import "normalize";
+@import "theme";
+@import "fonts";
+
+
+body {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  background-position: center center;
+  background-size: cover;
+}
+
+.image-on-background {
+  background-image: var(--background-image);
+  background-position: center center;
+  background-size: cover;
+}
+
+.wrapper {
+  &.lock {
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 998;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .5);
+      backdrop-filter: var(--backdrop-blur-filter-20);
+    }
+  }
+}
+
+
+textarea {
+  background-color: var(--input-background);
+}
+
+
+a {
+  outline: none;
+}
+
+
+.background-content {
+  background-color: var(--primary-backgound);
+  backdrop-filter: var(--backdrop-blur-filter-20);
+  border-radius: 0 0 25px 25px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: inherit;
+  -webkit-box-shadow: 0 0 0 1000px var(--input-background) inset;
+}

@@ -1,0 +1,48 @@
+@mixin dark {
+  @include defaults;
+
+  --wrapper-background: rgba(26, 27, 38, 75%);
+  --primary-backgound: rgba(0, 0, 0, 50%);
+  --secondary-background: rgba(255, 255, 255, 50%);
+  --messages-background: rgba(0, 0, 0, 25%);
+  --input-background: rgba(0, 0, 0, 0.25);
+  --text-color: var(--white);
+  --placeholder-color: rgba(255 ,255, 255, 50%);
+  --selected-chat-background: var(--primary-backgound);
+  --selected-chat-box-shadow: 0 0 12px var(--messages-background);
+  --chat-border: 1px solid rgba(255, 255, 255, 25%);
+}
+
+@mixin light {
+  @include defaults;
+
+  --wrapper-background: rgba(255, 255, 255, 50%);
+  --primary-backgound: var(--white);
+  --secondary-background: rgba(255, 255, 255, 85%);
+  --messages-background: var(--secondary-background);
+  --input-background: rgb(233, 233, 233);
+  --text-color: var(--black);
+  --placeholder-color: rgba(0 ,0, 0, 50%);
+  --selected-chat-background: var(--secondary-background);
+  --selected-chat-box-shadow: 0 0 12px rgba(0, 0, 0, 15%);
+  --chat-border: 1px solid transparent;
+  --background-image: url("../../assets/images/body-bg-light.jpg");
+}
+
+@mixin defaults {
+  --white: rgb(255 ,255, 255);
+  --black: rgb(0, 0, 0);
+  --red: rgb(245, 0, 0);
+  --orange: rgb(245, 102, 0);
+  --gray: #C7C7C7;
+  --green: rgb(98, 245, 0);
+  --yellow: rgb(245, 225, 0);
+  --backdrop-blur-filter-20: blur(10px);
+  --backdrop-blur-filter-70: blur(70px);
+  --background-image: url("../../assets/images/body-bg-dark.jpg");
+
+  --out-message-background: rgb(46, 157, 251);
+  --in-mesage-background: rgb(233, 233, 235);
+  --out-message-color: var(--white);
+  --in-message-color: var(--black);
+}

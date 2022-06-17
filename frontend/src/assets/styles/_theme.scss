@@ -1,0 +1,13 @@
+@import "colors_system";
+
+:root {
+  body {
+    &, &.light {
+      @include light;
+    }
+
+    &.dark {
+      @include dark;
+    }
+  }
+}

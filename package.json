@@ -1,0 +1,31 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "bootstrap:frontend": "lerna bootstrap --ignore backend",
+    "build": "lerna run build",
+    "build:frontend": "lerna run build --ignore backend",
+    "lint": "npm run lint:es; npm run lint:style",
+    "lint:es": "lerna run lint:es --no-bail --parallel",
+    "lint:style": "lerna run lint:style --no-bail --parallel"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint": "^8.16.0",
+    "eslint-plugin-sort-exports": "^0.6.0",
+    "eslint-plugin-vue": "^9.0.1",
+    "lerna": "^5.0.0",
+    "postcss": "^8.4.14",
+    "postcss-html": "^1.4.1",
+    "stylelint": "^14.8.5",
+    "stylelint-config-css-modules": "^4.1.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "typescript": "^4.7.2",
+    "vue-eslint-parser": "^9.0.2"
+  }
+}
